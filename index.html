@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D717HPEYJ2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D717HPEYJ2');
+  </script>
+
+  <!--
+  ============================================================
+   ETHAN POPPLE — PERSONAL AVIATION WEBSITE
+   index.html
+  ============================================================
+
+   QUICK CUSTOMISATION GUIDE
+   ─────────────────────────
+   Search this file for the tag  [EDIT]  to find every spot
+   you'll need to update before going live.
+
+   KEY THINGS TO CHANGE:
+   1. Hero photo    → search for [EDIT: HERO PHOTO]
+   2. Gallery photos → search for [EDIT: GALLERY PHOTO]
+   3. Email address → search for [EDIT: EMAIL]
+   4. Instagram handle → currently @ethanpopple — search [EDIT: INSTAGRAM]
+   5. LinkedIn URL  → currently linkedin.com/in/ethanpopple
+   6. Résumé PDF    → place "ethan-popple-resume.pdf" in this folder
+
+  ============================================================
+  -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── [EDIT] Page title & meta description ───────────────── -->
+  <title>Ethan Popple — Aviation Professional | flywithpopple.com</title>
+  <meta name="description"
+    content="Ethan Popple — FAA-certified commercial pilot, CFI, CFII and multi-engine rated. 200+ hours PIC. Based in St. Thomas, USVI. Actively seeking flight instruction, crop dusting, skydive, and seaplane operations roles." />
+
+  <!-- Open Graph (for link previews on social/iMessage) -->
+  <meta property="og:title"       content="Ethan Popple — Aviation Professional" />
+  <meta property="og:description" content="Six FAA ratings. 200+ hours PIC. Built for the skies above islands." />
+  <meta property="og:url"         content="https://flywithpopple.com" />
+  <meta property="og:type"        content="website" />
+  <!-- [EDIT: OG IMAGE] Add an og:image tag once you have a good photo:
+  <meta property="og:image" content="https://flywithpopple.com/images/og-cover.jpg" />
+  -->
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://flywithpopple.com" />
+
+  <!-- ── Google Fonts ───────────────────────────────────────── -->
+  <!--
+    DM Serif Display — headings (elegant, editorial)
+    DM Sans         — body text (clean, modern)
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+
+    <!-- Logo -->
+    <a href="#hero" class="nav-logo">
+      Ethan<span> Popple</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#connect">Connect</a></li>
+      <li><a href="#hire" class="nav-hire">Available for hire</a></li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 1 — HERO
+       ═══════════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Hero">
+
+    <!-- Animated star-field (drawn by script.js) -->
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- Dot-grid background overlay -->
+    <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+    <!-- Ambient glow blobs -->
+    <div class="hero-glow hero-glow-gold" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-blue"  aria-hidden="true"></div>
+
+    <div class="hero-inner">
+
+      <!-- ── Left: text content ── -->
+      <div class="hero-text">
+
+        <!-- Status indicator -->
+        <div class="hero-status" aria-label="Currently based in St. Thomas, USVI">
+          <span class="hero-status-dot" aria-hidden="true"></span>
+          Aviation Professional &bull; St. Thomas, USVI
+        </div>
+
+        <!-- Name -->
+        <h1 class="hero-name">
+          Ethan<br>
+          <span class="last">Popple</span>
+        </h1>
+
+        <!-- Tagline -->
+        <p class="hero-tagline">"Disciplined. Curious. Committed. Passionate aviator."</p>
+
+        <!-- FAA certification pills -->
+        <div class="cert-pills" aria-label="FAA Certifications">
+          <span class="cert-pill pill-gold" title="Private Pilot License">PPL</span>
+          <span class="cert-pill pill-gold" title="Instrument Rating">IFR</span>
+          <span class="cert-pill pill-gold" title="Commercial Pilot License">CPL</span>
+          <span class="cert-pill pill-sky"  title="Certified Flight Instructor">CFI</span>
+          <span class="cert-pill pill-sky"  title="Certified Flight Instructor – Instrument">CFII</span>
+          <span class="cert-pill pill-gold" title="Multi-Engine Land Rating">Multi-Engine</span>
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="hero-buttons">
+          <!--
+            [EDIT: RESUME] Place "ethan-popple-resume.pdf" in the same
+            folder as this file. The download will work automatically.
+          -->
+          <a href="ethan-popple-resume.pdf" download class="btn btn-gold">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Résumé
+          </a>
+          <a href="#connect" class="btn btn-outline">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Get in Touch
+          </a>
+        </div>
+
+      </div><!-- /hero-text -->
+
+      <!-- ── Right: photo ── -->
+      <div class="hero-photo" aria-hidden="true">
+        <div class="hero-photo-frame">
+          <div class="hero-photo-inner">
+
+            <img src="images/ethan-hero.jpg" alt="Ethan Popple" style="width:100%; height:100%; object-fit:cover; object-position:center 20%;" />
+
+          </div>
+
+          <!-- Floating stat badge — PIC hours -->
+          <div class="photo-badge photo-badge-hours" aria-hidden="true">
+            <span class="badge-val">200+</span>
+            <span class="badge-lbl">PIC Hours</span>
+          </div>
+
+          <!-- Floating stat badge — FAA ratings -->
+          <div class="photo-badge photo-badge-certs" aria-hidden="true">
+            <span class="badge-val">6</span>
+            <span class="badge-lbl">FAA Ratings</span>
+          </div>
+
+        </div>
+      </div><!-- /hero-photo -->
+
+    </div><!-- /hero-inner -->
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll-cue" aria-hidden="true">
+      <span class="scroll-cue-label">scroll</span>
+      <div class="scroll-cue-line"></div>
+    </div>
+
+  </section><!-- /hero -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       AIRVENTURE BANNER
+       ═══════════════════════════════════════════════════════ -->
+  <div style="background:#112240; border-left:4px solid #c8a96e; width:100%; padding:2rem 3rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:2rem; box-sizing:border-box;">
+    <div>
+      <p style="font-size:0.68rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:#c8a96e; margin:0 0 0.4rem;">Attending in Person</p>
+      <h2 style="font-family:'DM Serif Display', serif; font-size:1.8rem; color:#f5f0eb; margin:0 0 0.3rem; font-weight:400;">Meet me at EAA AirVenture 2026</h2>
+      <p style="color:#8fa8b8; font-size:0.9rem; margin:0;">July 22–26, 2026 &nbsp;&middot;&nbsp; Oshkosh, Wisconsin</p>
+      <div style="width:80px; height:80px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:10px; flex-shrink:0; margin-top:1rem;">
+        <img src="images/logo-eea-oshkosh.png" alt="EAA AirVenture 2026" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+    </div>
+    <a href="#connect" style="background:#c8a96e; color:#0a1628; padding:0.75rem 1.8rem; border-radius:2px; text-decoration:none; font-size:0.82rem; letter-spacing:1px; text-transform:uppercase; font-weight:500; white-space:nowrap;">Get in touch</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 2 — ABOUT
+       ═══════════════════════════════════════════════════════ -->
+  <section id="about" aria-label="About Ethan">
+    <div class="wrap section-pad">
+
+      <div class="reveal">
+        <p class="eyebrow">About</p>
+        <h2 class="section-heading">Commercial Pilot | CFII | <em>Open to Relocation</em></h2>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Left: story text + stats -->
+        <div class="about-body reveal delay-1">
+          <p>
+            In 2020, my life took a sharp turn in the best possible way. My family relocated
+            from <strong>Middletown, Maryland</strong> to <strong>St. Thomas in the
+            U.S. Virgin Islands</strong>, a move that opened the door to experiences that
+            would shape who I am today.
+          </p>
+          <p>
+            I threw myself into island life, learning to sail, building lifelong friendships,
+            and developing a deep connection to a place where the sea and sky feel limitless.
+            It was here that my interest in aviation truly took hold.
+          </p>
+          <p>
+            At <strong>Virgin Islands Montessori School &amp; Peter Gruber International
+            Academy</strong>, one of the Caribbean's only International Baccalaureate schools,
+            I balanced the demands of a full IB curriculum with varsity soccer, earning my
+            Eagle Scout, and working part time at <strong>The Smoking Rooster</strong>, all
+            while beginning my flight training.
+          </p>
+          <p>
+            At <span class="hl-gold">16</span>, I was awarded the highly competitive
+            <strong>Coral Wings Aviation Scholarship</strong> through the University of the
+            Virgin Islands and the FAA. That moment turned a growing passion into a clear
+            career path.
+          </p>
+          <p>
+            Today, I am training full time in the <strong>Airline Academy Program at American
+            Flyers</strong> in Florida. Since September 2025, I have earned my Private Pilot
+            License and Instrument Rating, and I am on track to complete my Commercial
+            License, CFI, CFII, and MEI by <span class="hl-gold">June 26, 2026</span>. Upon
+            graduation, I will have over 200 hours of Pilot in Command time, with an even
+            greater drive to continue learning and progressing in aviation.
+          </p>
+          <p>
+            I am <span class="hl-sky">actively seeking my first commercial opportunity</span>
+            and am eager to contribute, learn, and grow in any environment that challenges me.
+          </p>
+
+          <!-- Animated stat boxes -->
+          <div class="stats-grid">
+            <div class="stat-box">
+              <div class="stat-val" data-count="6" data-suffix="">6</div>
+              <div class="stat-lbl">Target FAA Ratings</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val" data-count="200" data-suffix="+">200+</div>
+              <div class="stat-lbl">PIC Hours on Graduation</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val" data-count="15" data-suffix="">15</div>
+              <div class="stat-lbl">Years in Scouting</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val">
+                <span id="ethan-age">18</span>
+              </div>
+              <div class="stat-lbl">Years Old</div>
+            </div>
+          </div>
+        </div><!-- /about-body -->
+
+        <!-- Right: goals & aspirations cards -->
+        <div class="about-cards reveal delay-2">
+
+          <div class="info-card">
+            <p class="info-card-title">
+              <span class="info-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 11 C5 9.5 9 9.5 13 10.5 L18 9.5"/><path d="M9 10 L7.5 6.5 L5.5 8.5"/><path d="M6 11 L5 14 L7.5 13"/><path d="M15 9.8 L14.5 8.2"/><path d="M15 10.2 L13.5 10.2"/><path d="M10 13 L10 16.5"/><path d="M8 16.5 L12 16.5"/></svg></span>
+              Flight Instructor
+            </p>
+            <p>I strongly believe the best way to learn is to teach. Becoming a flight instructor would let me build on the mentorship and leadership skills I developed during my Eagle Scout journey, while continuing to refine my own abilities alongside other passionate pilots.</p>
+          </div>
+
+          <div class="info-card">
+            <p class="info-card-title">
+              <span class="info-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2 L13 8 L19 9 L14.5 13.5 L15.5 19.5 L10 16.5 L4.5 19.5 L5.5 13.5 L1 9 L7 8 Z"/><path d="M10 10 L10 7"/></svg></span>
+              Alaska
+            </p>
+            <p>Some of the most skilled pilots I have met have spent time flying in challenging environments. I am particularly drawn to Alaska, where flying demands precision, adaptability, and resilience. I would welcome the opportunity to develop those skills, ideally alongside training as an <strong>A&amp;P mechanic</strong> to broaden my technical understanding of aircraft.</p>
+          </div>
+
+          <div class="info-card">
+            <p class="info-card-title">
+              <span class="info-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14 Q6 10 10 14 Q14 18 18 14"/><path d="M2 10 Q6 6 10 10 Q14 14 18 10"/><path d="M7 8 L7 5 L13 5 L13 8"/><path d="M10 5 L10 2"/></svg></span>
+              Seaplane Rating
+            </p>
+            <p>Growing up in the Virgin Islands, I was inspired early by the experience of landing on water. Earning a seaplane rating and developing those skills is something I am genuinely excited to pursue.</p>
+          </div>
+
+          <div class="info-card">
+            <p class="info-card-title">
+              <span class="info-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><path d="M2 10 Q6 7 10 10 Q14 13 18 10"/><path d="M10 2 Q7 6 7 10 Q7 14 10 18"/><path d="M10 2 Q13 6 13 10 Q13 14 10 18"/></svg></span>
+              Australian License
+            </p>
+            <p>With both <strong>UK and US citizenship</strong>, I am fortunate to have opportunities to explore aviation globally. I would be very interested in pursuing an Australian CPL conversion as part of a broader international flying experience.</p>
+          </div>
+
+          <div class="info-card">
+            <p class="info-card-title">
+              <span class="info-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3 L6 14"/><path d="M6 7 L11 9 L11 5 L6 7"/><path d="M4 17 Q6 15.5 8 17"/></svg></span>
+              Beyond Aviation
+            </p>
+            <p>When I'm not flying, you'll likely find me traveling, diving the reefs around St. Thomas, playing guitar, or putting the finishing touches on a well planned meal. I enjoy cooking almost as much as I enjoy flying. Both require precision, creativity, and attention to detail.</p>
+          </div>
+
+        </div><!-- /about-cards -->
+
+      </div><!-- /about-grid -->
+
+    </div>
+  </section><!-- /about -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 3 — CERTIFICATIONS
+       ═══════════════════════════════════════════════════════ -->
+  <section id="certifications" aria-label="FAA Certifications">
+    <div class="wrap section-pad">
+
+      <div class="certs-header reveal">
+        <div>
+          <p class="eyebrow">Certifications</p>
+          <h2 class="section-heading">Six FAA <em>Ratings</em></h2>
+        </div>
+        <p class="section-sub">Two earned. Four in progress, on track to complete the full Airline Academy Program by June 26, 2026.</p>
+      </div>
+
+      <div class="certs-grid">
+
+        <!-- ── EARNED ── -->
+
+        <div class="cert-card reveal delay-1">
+          <div class="cert-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 11 C5 9.5 9 9.5 13 10.5 L18 9.5"/><path d="M9 10 L7.5 6.5 L5.5 8.5"/><path d="M6 11 L5 14 L7.5 13"/><path d="M15 9.8 L14.5 8.2"/><path d="M15 10.2 L13.5 10.2"/></svg></div>
+          <p class="cert-code">PPL</p>
+          <h3>Private Pilot</h3>
+          <p>The foundation of all flight training. Authorizes solo and cross-country flight as pilot-in-command under visual flight rules, including night operations and basic instrument reference.</p>
+          <p class="cert-progress-badge cert-earned">Completed December 2025</p>
+        </div>
+
+        <div class="cert-card reveal delay-2">
+          <div class="cert-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><line x1="10" y1="2" x2="10" y2="5.5"/><line x1="10" y1="14.5" x2="10" y2="18"/><line x1="2" y1="10" x2="5.5" y2="10"/><line x1="14.5" y1="10" x2="18" y2="10"/><circle cx="10" cy="10" r="1.5" fill="#c8a96e" stroke="none"/></svg></div>
+          <p class="cert-code">IFR</p>
+          <h3>Instrument Rating</h3>
+          <p>Authorizes flight in instrument meteorological conditions and operations under IFR. Covers precision approaches, holding patterns, and full situational awareness through the cockpit instruments alone.</p>
+          <p class="cert-progress-badge cert-earned">Completed January 2026</p>
+        </div>
+
+        <!-- ── IN PROGRESS ── -->
+
+        <div class="cert-card in-progress reveal delay-3">
+          <div class="cert-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="5.5"/><path d="M6.5 12.5 L4.5 18 L10 15.5 L15.5 18 L13.5 12.5"/><path d="M10 5 L10.7 7.2 L13 7.2 L11.2 8.6 L11.9 10.8 L10 9.4 L8.1 10.8 L8.8 8.6 L7 7.2 L9.3 7.2 Z"/></svg></div>
+          <p class="cert-code">CPL</p>
+          <h3>Commercial Pilot</h3>
+          <p>Authorizes compensation for flight operations. Builds on private and instrument foundations with higher precision standards, complex aircraft endorsements, and commercial maneuver proficiency.</p>
+          <p class="cert-progress-badge">In progress — target April 2026</p>
+        </div>
+
+        <div class="cert-card in-progress reveal delay-4">
+          <div class="cert-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="5.5" r="2.5"/><path d="M2.5 15 C2.5 11 11.5 11 11.5 15"/><circle cx="14" cy="5.5" r="2.5"/><path d="M9.5 15 C9.5 11 18.5 11 18.5 15"/></svg></div>
+          <p class="cert-code">CFI</p>
+          <h3>Flight Instructor</h3>
+          <p>Authorizes the holder to provide flight instruction to student pilots seeking private and commercial certificates. Requires mastery of teaching techniques, aeronautical knowledge, and airmanship.</p>
+          <p class="cert-progress-badge">In progress — target June 2026</p>
+        </div>
+
+        <div class="cert-card in-progress reveal delay-5">
+          <div class="cert-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="5" r="2.5"/><path d="M2 14 C2 10 11 10 11 14"/><circle cx="15" cy="12" r="4"/><polyline points="15,9.5 15,12 17,12"/></svg></div>
+          <p class="cert-code">CFII</p>
+          <h3>Instrument Instructor</h3>
+          <p>Authorizes instruction in instrument flight rules and procedures. Combines the full instrument rating curriculum with the teaching skills required to develop safe and proficient IFR pilots.</p>
+          <p class="cert-progress-badge">In progress — target June 2026</p>
+        </div>
+
+        <div class="cert-card in-progress reveal delay-6">
+          <div class="cert-icon-wrap"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#c8a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2 L10 18"/><path d="M2.5 10 L17.5 10"/><rect x="3" y="8.5" width="3" height="3" rx="1.5"/><rect x="14" y="8.5" width="3" height="3" rx="1.5"/><path d="M7.5 16 Q10 17 12.5 16"/><path d="M9.5 2 Q10 1.5 10.5 2"/></svg></div>
+          <p class="cert-code">ME</p>
+          <h3>Multi Engine</h3>
+          <p>Authorizes operation of a twin-engine aircraft. Includes critical engine failure management, asymmetric thrust procedures, and the full systems knowledge required for multi-engine operations.</p>
+          <p class="cert-progress-badge">In progress — target June 2026</p>
+        </div>
+
+      </div><!-- /certs-grid -->
+
+      <div style="display:flex; align-items:center; gap:16px; margin-top:1.5rem; padding:1rem 1.25rem; border:1px solid rgba(200,169,110,0.25); border-radius:6px; background:rgba(200,169,110,0.05);">
+        <div style="width:80px; height:80px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:10px; flex-shrink:0;">
+          <img src="images/logo-nbaa.png" alt="NBAA" style="width:100%; height:100%; object-fit:contain;">
+        </div>
+        <div>
+          <p style="font-size:0.7rem; letter-spacing:2px; text-transform:uppercase; color:#c8a96e; margin:0 0 4px;">Professional Membership</p>
+          <p style="font-size:0.95rem; color:#f5f0eb; margin:0; font-weight:500;">Proud member of the National Business Aviation Association (NBAA)</p>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- /certifications -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 4 — JOURNEY (TIMELINE)
+       ═══════════════════════════════════════════════════════ -->
+  <section id="journey" aria-label="Ethan's journey">
+    <div class="wrap section-pad">
+
+      <div class="reveal">
+        <p class="eyebrow">Journey</p>
+        <h2 class="section-heading">A Life in <em>Motion</em></h2>
+        <p class="section-sub">From the suburbs of Maryland to the cockpit over the Caribbean. The milestones that shaped an aviator.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item reveal delay-1">
+          <div class="tl-dot"></div>
+          <p class="tl-date">2025–Present, Pompano Beach, FL</p>
+          <div class="tl-card">
+            <h3>Full-Time Training at American Flyers</h3>
+            <p>Enrolled full-time on the <strong>Airline Academy Program at American Flyers</strong>, Pompano Beach FL, completing PPL, IFR, CPL, CFI, CFII, and Multi-Engine ratings in sequence. On graduation (June 2026) will hold six FAA certificates and 200+ hours PIC.</p>
+            <p style="margin-top:0.6rem; font-style:italic; color:var(--gold);">Actively seeking my first commercial aviation role.</p>
+            <div style="margin-top:1.5rem; opacity:0.85;">
+              <img src="images/logo-american-flyers.jpg" alt="American Flyers" style="height:60px; width:auto; object-fit:contain;">
+            </div>
+            <div class="tl-tags">
+              <span class="tl-tag tag-gold">American Flyers</span>
+              <span class="tl-tag tag-gold">Airline Academy</span>
+              <span class="tl-tag tag-blue">200+ Hours PIC</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-2">
+          <div class="tl-dot"></div>
+          <p class="tl-date">2025, VIMSIA, St. Thomas</p>
+          <div class="tl-card">
+            <h3>Graduation &amp; Eagle Scout</h3>
+            <p>Graduated from <strong>VIMSIA</strong>, an International Baccalaureate school, having completed the full IB curriculum alongside soccer, Scouting, work, and active flight training. In the same year, earned <strong>Eagle Scout</strong> rank, Scouting's highest honor, after 15 continuous years of BSA membership. Fewer than 4% of all scouts reach the rank of Eagle Scout.</p>
+            <div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap; margin-top:1.5rem; opacity:0.85;">
+              <img src="images/logo.vimsia.webp" alt="VIMSIA" style="height:60px; width:auto; object-fit:contain;">
+              <img src="images/logo-eagle-scout.webp" alt="Eagle Scout BSA" style="height:60px; width:auto; object-fit:contain;">
+            </div>
+            <div class="tl-tags">
+              <span class="tl-tag tag-gold">IB School</span>
+              <span class="tl-tag tag-gold">Eagle Scout</span>
+              <span class="tl-tag tag-blue">VIMSIA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-1">
+          <div class="tl-dot blue"></div>
+          <p class="tl-date blue">August 2023, Saemangeum, South Korea</p>
+          <div class="tl-card">
+            <h3>25th World Scout Jamboree</h3>
+            <p>Selected as part of the official <strong>United States contingent</strong> for the 25th World Scout Jamboree in Saemangeum, South Korea, one of the largest youth gatherings on Earth. <strong>43,000 scouts from 158 countries.</strong> A two-week cultural exchange and leadership experience with a truly global scope.</p>
+            <div style="margin-top:1rem; opacity:0.85;">
+              <div style="width:80px; height:80px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:10px; flex-shrink:0;">
+                <img src="images/logo-jamboree.png" alt="25th World Scout Jamboree" style="width:100%; height:100%; object-fit:contain;">
+              </div>
+            </div>
+            <div class="tl-tags">
+              <span class="tl-tag tag-gold">World Jamboree</span>
+              <span class="tl-tag tag-blue">South Korea</span>
+              <span class="tl-tag tag-green">43,000 Scouts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-2">
+          <div class="tl-dot"></div>
+          <p class="tl-date">2023, Coral Wings Aviation Scholarship</p>
+          <div class="tl-card">
+            <h3>🏆 Coral Wings Aviation Scholarship</h3>
+            <p>Awarded the <strong>Coral Wings Aviation Scholarship</strong> through the University of the Virgin Islands and the FAA, one of the territory's most competitive aviation honors, awarded at 16 years old. This was the defining moment that turned a growing passion into a committed career path and funded the first serious flight training.</p>
+            <div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap; margin-top:1.5rem; opacity:0.85;">
+              <div style="width:80px; height:80px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:10px; flex-shrink:0;">
+                <img src="images/logo-coral-wings.jpg" alt="Coral Wings Aviation" style="width:100%; height:100%; object-fit:contain;">
+              </div>
+              <div style="width:80px; height:80px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:10px; flex-shrink:0;">
+                <img src="images/logo-uvi.jpg" alt="University of the Virgin Islands" style="width:100%; height:100%; object-fit:contain;">
+              </div>
+              <div style="width:80px; height:80px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:10px; flex-shrink:0;">
+                <img src="images/logo-uflyvi.webp" alt="UFly VI" style="width:100%; height:100%; object-fit:contain;">
+              </div>
+              <img src="images/logo-faa.png" alt="FAA" style="height:60px; width:auto; object-fit:contain;">
+            </div>
+            <div class="tl-tags">
+              <span class="tl-tag tag-gold">Scholarship</span>
+              <span class="tl-tag tag-gold">Aviation</span>
+              <span class="tl-tag tag-blue">UVI &amp; FAA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-1">
+          <div class="tl-dot"></div>
+          <p class="tl-date">Jun–Aug 2022, 2023 &amp; 2024 · Cascade Range, Oregon</p>
+          <div class="tl-card">
+            <h3>Camp Counselor &amp; Camp Commissioner</h3>
+            <p><strong>BSA Camp Pioneer · Cascade Range, Oregon, USA</strong></p>
+            <p>Exercised leadership and mentorship in a high-responsibility camp environment, leading hikes and overnight expeditions, delivering nature education, and supporting archery and shooting programs while serving as a strong role model.</p>
+            <div style="margin-top:1rem; opacity:0.85;">
+              <div style="width:80px; height:80px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:10px; flex-shrink:0;">
+                <img src="images/logo-pioneer.webp" alt="BSA Camp Pioneer" style="width:100%; height:100%; object-fit:contain;">
+              </div>
+            </div>
+            <div class="tl-tags">
+              <span class="tl-tag tag-green">BSA</span>
+              <span class="tl-tag tag-green">Leadership</span>
+              <span class="tl-tag tag-blue">Oregon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-2">
+          <div class="tl-dot"></div>
+          <p class="tl-date">2020–2024, USVI National Team</p>
+          <div class="tl-card">
+            <h3>Soccer: USVI National Team &amp; VIMSIA Varsity</h3>
+            <p>Selected to compete with the <strong>USVI National Youth Soccer Team</strong> and represented VIMSIA at varsity level throughout high school. Four years of elite competition helped to build skills in teamwork, composure, and discipline that translate directly to professional aviation.</p>
+            <div class="tl-tags">
+              <span class="tl-tag tag-green">Athletics</span>
+              <span class="tl-tag tag-blue">USVI National Team</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-1">
+          <div class="tl-dot blue"></div>
+          <p class="tl-date blue">2020, Philmont Scout Ranch, New Mexico</p>
+          <div class="tl-card">
+            <h3>Philmont Backcountry High Adventure Camp</h3>
+            <p>Completed the multi-day backcountry wilderness expedition at <strong>Philmont Scout Ranch</strong> in the Sangre de Cristo Mountains, one of Scouting's most demanding high-adventure programs. Over 100 miles of high-altitude terrain with a full pack. Also completed high-adventure programming at the <strong>Summit Bechtel Reserve</strong>, West Virginia (2018).</p>
+            <div style="margin-top:1rem; opacity:0.85;">
+              <div style="width:80px; height:80px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:10px; flex-shrink:0;">
+                <img src="images/logo-philmont.png" alt="Philmont Scout Ranch" style="width:100%; height:100%; object-fit:contain;">
+              </div>
+            </div>
+            <div class="tl-tags">
+              <span class="tl-tag tag-green">BSA</span>
+              <span class="tl-tag tag-green">Wilderness</span>
+              <span class="tl-tag tag-green">New Mexico</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-2">
+          <div class="tl-dot blue"></div>
+          <p class="tl-date blue">2020, St. Thomas, USVI</p>
+          <div class="tl-card">
+            <h3>Family Relocates to the Virgin Islands</h3>
+            <p>During the Covid pandemic, the family relocated to <strong>St. Thomas, USVI</strong> <img src="images/logo-vi-flag.jpg" alt="US Virgin Islands" style="height:18px; width:auto; vertical-align:middle; margin-left:6px; border-radius:2px;">. Ethan immediately integrated into island culture and community activities, learning to sail through the <strong>St. Thomas Yacht Club</strong> and the VIMSIA school programme, joining school teams and amateur athletic soccer teams, and discovering a life that intersects sea and sky.</p>
+            <div style="margin-top:1rem; opacity:0.85;">
+              <div style="width:80px; height:80px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:10px; flex-shrink:0;">
+                <img src="images/logo-styc.png" alt="St Thomas Yacht Club" style="width:100%; height:100%; object-fit:contain;">
+              </div>
+            </div>
+            <div class="tl-tags">
+              <span class="tl-tag tag-blue">USVI</span>
+              <span class="tl-tag tag-green">Sailing</span>
+              <span class="tl-tag tag-blue">VIMSIA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-1">
+          <div class="tl-dot"></div>
+          <p class="tl-date">2007–2020, Middletown, Maryland</p>
+          <div class="tl-card">
+            <h3>Born in Maryland <img src="images/logo-md-flag.jpg" alt="Maryland" style="height:18px; width:auto; vertical-align:middle; margin-left:6px; border-radius:2px;"></h3>
+            <p>Born as a <strong>dual US and UK citizen</strong>, Ethan grew up on a small farm in Middletown, Maryland, where he developed an early love of everything outdoors and exploration. This would define everything that followed, from high adventure Scouting expeditions to the cockpit.</p>
+            <div class="tl-tags">
+              <span class="tl-tag tag-gold">Origin</span>
+              <span class="tl-tag tag-gold">Dual Citizen</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+
+    </div>
+  </section><!-- /journey -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 5 — AVAILABLE FOR HIRE
+       ═══════════════════════════════════════════════════════ -->
+  <section id="hire" aria-label="Available for hire">
+    <div class="wrap section-pad">
+
+      <div class="hire-simple reveal">
+        <div class="available-badge" style="margin-bottom:1rem;">
+          <span class="available-dot" aria-hidden="true"></span>
+          Actively available
+        </div>
+        <p class="eyebrow">Available for Hire</p>
+        <h2 class="section-heading" style="margin-bottom:2rem;">Ready to Fly <em>Your Mission</em></h2>
+
+        <ul class="hire-bullets">
+          <li>Actively available to fly your mission</li>
+          <li>Passionate about flying</li>
+          <li>Keen to learn</li>
+          <li>Thrives in demanding, non-standard, and remote environments</li>
+          <li>Open to relocation</li>
+        </ul>
+
+        <a href="#connect" class="btn btn-outline" style="margin-top:0.5rem;">
+          Get in touch &darr;
+        </a>
+      </div>
+
+    </div>
+  </section><!-- /hire -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION 6 — CONNECT
+       ═══════════════════════════════════════════════════════ -->
+  <section id="connect" aria-label="Connect with Ethan">
+    <div class="wrap section-pad">
+      <div class="connect-inner">
+
+        <div class="reveal">
+          <p class="eyebrow">Connect</p>
+          <h2 class="section-heading">Let's Talk <em>Aviation</em></h2>
+          <p class="section-sub">Whether you're hiring, want to swap flying stories, or just say hello, I'm always happy to connect.</p>
+        </div>
+
+        <!-- Social / contact links -->
+        <div class="connect-links reveal delay-1">
+
+          <a href="tel:+12402850181" class="connect-card" aria-label="Call Ethan">
+            <div class="connect-icon" aria-hidden="true">📞</div>
+            <div class="connect-info">
+              <span class="connect-info-label">Phone</span>
+              <span class="connect-info-val">240-285-0181</span>
+            </div>
+          </a>
+
+          <a href="mailto:ethan@flywithpopple.com" class="connect-card" aria-label="Email Ethan">
+            <div class="connect-icon" aria-hidden="true">✉️</div>
+            <div class="connect-info">
+              <span class="connect-info-label">Email</span>
+              <span class="connect-info-val">ethan@flywithpopple.com</span>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/ethan-popple-0aa880346/" target="_blank" rel="noopener noreferrer" class="connect-card" aria-label="Ethan on LinkedIn">
+            <div class="connect-icon" aria-hidden="true">💼</div>
+            <div class="connect-info">
+              <span class="connect-info-label">LinkedIn</span>
+              <span class="connect-info-val">Ethan Popple</span>
+            </div>
+          </a>
+
+          <a href="https://www.facebook.com/profile.php?id=61553364636374" target="_blank" rel="noopener noreferrer" class="connect-card" aria-label="Ethan on Facebook">
+            <div class="connect-icon" aria-hidden="true">👤</div>
+            <div class="connect-info">
+              <span class="connect-info-label">Facebook</span>
+              <span class="connect-info-val">Ethan Popple</span>
+            </div>
+          </a>
+
+        </div><!-- /connect-links -->
+
+        <!-- Résumé download -->
+        <!--
+          [EDIT: RESUME] Place a file named "ethan-popple-resume.pdf" in the
+          same folder as this index.html. The download link will work automatically.
+        -->
+        <a href="ethan-popple-resume.pdf" download class="connect-resume reveal delay-2" aria-label="Download Ethan's résumé">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Résumé (PDF)
+        </a>
+
+      </div><!-- /connect-inner -->
+    </div>
+  </section><!-- /connect -->
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+
+    <div class="footer-left">
+      <p>
+        &copy; 2025 Ethan Popple &nbsp;&mdash;&nbsp; Aviation Professional<br>
+        <!-- [EDIT: EMAIL] -->
+        <a href="mailto:ethan@flywithpopple.com">ethan@flywithpopple.com</a>
+        &nbsp;&bull;&nbsp;
+        St. Thomas, USVI
+        &nbsp;&bull;&nbsp;
+        <a href="https://flywithpopple.com">flywithpopple.com</a>
+      </p>
+    </div>
+
+    <div class="footer-right">
+      flywithpopple.com
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
